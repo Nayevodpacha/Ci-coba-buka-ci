@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Image Example</title>
+    <style>
+        #noButton, #yesButton {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #noButton {
+            left: 35%;
+        }
+        #yesButton {
+            left: 60%;
+        }
+        #myImage {
+            display: block;
+            margin: 10px auto;
+            max-width: 200%;
+            height: auto;
+            width: 600px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">ucii karaoke??</h1>
+    <img id="myImage" src="C:\Users\Edric Fernando\Downloads\GV5Wx0RbcAEpWRR.jpeg" alt="Description of the image">
+    <button id="noButton" onmouseover="moveButton()">No</button>
+    <button id="yesButton" onclick="sayYes()">Yes</button>
+
+    <script>
+        function moveButton() {
+            const button = document.getElementById('noButton');
+            const x = Math.random() * (window.innerWidth - button.offsetWidth);
+            const y = Math.random() * (window.innerHeight - button.offsetHeight);
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+
+        function sayYes() {
+            alert("ok ditunggu");
+        }
+    </script>
+</body>
+</html>
